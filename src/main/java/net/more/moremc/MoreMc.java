@@ -14,6 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.more.moremc.block.ModBlocks;
+import net.more.moremc.item.ModItems;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,6 +30,9 @@ public class MoreMc {
 
     public MoreMc(){
         IEventBus eventBus = FMLJavaModLoadingContext.get ( ).getModEventBus ( );
+
+        ModBlocks.register (eventBus);
+        ModItems.register (eventBus);
 
         eventBus.addListener (this::setup);
         eventBus.addListener (this::enqueueIMC);
