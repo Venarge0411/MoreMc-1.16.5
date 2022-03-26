@@ -25,6 +25,14 @@ public class ModBlocks {
             () -> new Block (AbstractBlock.Properties.of (Material.STONE)
                     .harvestTool (ToolType.PICKAXE).requiresCorrectToolForDrops ().strength (1)));
 
+    public static final RegistryObject<Block> MUSSY_MUD_BRICKS = registerBlock ("mussy_mud_bricks",
+            () -> new Block (AbstractBlock.Properties.of (Material.STONE)
+                    .strength (1).harvestTool (ToolType.PICKAXE).requiresCorrectToolForDrops ()));
+
+    public static final RegistryObject<Block> CRACKED_MUD_BRICKS = registerBlock ("cracked_mud_bricks",
+            () -> new Block (AbstractBlock.Properties.of (Material.STONE)
+                    .strength (1).harvestTool (ToolType.PICKAXE).requiresCorrectToolForDrops ()));
+
     public static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toreturn = BLOCKS.register (name, block);
 
