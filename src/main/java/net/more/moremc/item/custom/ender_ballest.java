@@ -15,9 +15,6 @@ public class ender_ballest extends Item{
 
     public ender_ballest(Properties p_i48487_1_) {
         super (p_i48487_1_);
-        p_i48487_1_.tab (ModItemGroup.MOREMCTAB);
-        p_i48487_1_.stacksTo (1);
-        p_i48487_1_.durability (500);
     }
 
     public void crossbow(){
